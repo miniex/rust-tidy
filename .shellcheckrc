@@ -1,0 +1,8 @@
+# Default to POSIX sh — scripts in this repo target /bin/sh.
+shell=sh
+
+# Opt-in to extra lints that catch real bugs.
+enable=avoid-nullary-conditions
+enable=deprecate-which
+enable=quote-safe-variables
+enable=require-variable-braces

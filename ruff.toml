@@ -1,0 +1,36 @@
+line-length = 100
+target-version = "py39"
+
+extend-exclude = [
+    ".git",
+    "target",
+]
+
+[lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+    "RUF", # ruff-specific
+    "PTH", # flake8-use-pathlib
+    "C4",  # flake8-comprehensions
+]
+
+[lint.isort]
+known-first-party = ["rust_tidy"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
